@@ -1,2 +1,0 @@
-# SpookyHub
-React Project
