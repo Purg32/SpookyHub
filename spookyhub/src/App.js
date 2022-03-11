@@ -7,19 +7,23 @@ import {Add} from "./components/Add";
 import './App.css';
 //import './lib/font-awesome/css/all.min.css';
 
+import {GlobalProvider} from "./context/GlobalState";
+
 function App() {
   return (
-     <Router>
-       <Header />
+     <GlobalProvider>
+         <Router>
+           <Header />
 
-       <Routes>
-         <Route exact path="/" element={<Watchlist />} />
+           <Routes>
+             <Route exact path="/" element={<Watchlist />} />
 
-         <Route path="/watched" element={<Watched />} />
+             <Route path="/watched" element={<Watched />} />
 
-         <Route path="/add" element={<Add />} />
-       </Routes>
-     </Router>
+             <Route path="/add" element={<Add />} />
+           </Routes>
+         </Router>
+     </GlobalProvider>
   );
 }
 
