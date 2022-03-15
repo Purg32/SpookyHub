@@ -12,7 +12,7 @@ export const ResultCard = ({movie}) => {
     const watchedDisabled = storedMovieWatched ? true : false;
 
     return (
-        <div className="result=card">
+        <div className="result-card">
             <div className="poster-wrapper">
                 {movie.poster_path ? (
                     <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
@@ -39,7 +39,7 @@ export const ResultCard = ({movie}) => {
                     </button>
 
                     <button className="btn"
-                            disabled={watchlistDisabled}
+                            disabled={watchedDisabled}
                             onClick={() => addMovieToWatched(movie)}>
                         Add to Watched
                     </button>
