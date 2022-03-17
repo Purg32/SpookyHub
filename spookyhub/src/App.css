@@ -48,7 +48,7 @@ body {
   padding: 10px 15px;
   background-color: var(--secondary);
   color: var(--primary);
-  border-radius: 5px;
+  border-radius: 1rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -289,4 +289,45 @@ header .nav-links li:last-child {
   color: #c4c4c4;
   font-size: 3rem;
   text-align: center;
+}
+
+.logo {
+  width: 11rem;
+  height: 11rem;
+}
+
+.btn-burger {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: #000;
+  font-size: 18px;
+}
+
+@media(max-width: 700px){
+  header .nav-links {
+    flex-direction: column;
+    height: auto;
+  }
+
+  header .nav-links li:nth-child(1){
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    margin-top: 50px;
+  }
+
+  header .nav-links li{
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    text-align: center;
+    margin-right: 0px;
+    padding: 20px 0;
+  }
+
+  .btn-burger{
+    display: block;
+    top: 2rem;
+    right: 2rem;
+  }
 }
