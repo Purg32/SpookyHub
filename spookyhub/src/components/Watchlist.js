@@ -12,8 +12,8 @@ export const Watchlist = () => {
                     <h1 className="heading">My To-Watch List</h1>
 
                     <span className="count-pill">
-            {watchlist.length} {watchlist.length === 1 ? "Horror" : "Horrors"}
-          </span>
+                        {watchlist.length} {watchlist.length === 1 ? "Horror" : "Horrors"}
+                     </span>
                 </div>
 
                 {watchlist.length > 0 ? (

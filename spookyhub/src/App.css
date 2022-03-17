@@ -118,6 +118,47 @@ header .nav-links li:last-child {
   margin-right: 0;
 }
 
+.logo {
+  width: 11rem;
+  height: 11rem;
+}
+
+.btn-burger {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: #000;
+  font-size: 18px;
+}
+
+@media(max-width: 700px){
+  header .nav-links {
+    flex-direction: column;
+    height: auto;
+  }
+
+  header .nav-links li:nth-child(1){
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    margin-top: 50px;
+  }
+
+  header .nav-links li{
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.555);
+    text-align: center;
+    margin-right: 0px;
+    padding: 20px 0;
+  }
+
+  .btn-burger{
+    display: block;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
 /* Add Page */
 .add-content {
   padding: 50px 0;
@@ -185,6 +226,12 @@ header .nav-links li:last-child {
   margin-right: 10px;
 }
 
+@media(max-width: 700px){
+  .result-card .controls .btn {
+    font-size: 0.75rem;
+  }
+}
+
 /* Movie Page */
 .movie-page {
   padding: 30px 0;
@@ -216,6 +263,12 @@ header .nav-links li:last-child {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+}
+
+@media (max-width: 700px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 992px) {
@@ -262,7 +315,7 @@ header .nav-links li:last-child {
   background: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   padding: 3px;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.3s ease;
 }
 
@@ -289,45 +342,4 @@ header .nav-links li:last-child {
   color: #c4c4c4;
   font-size: 3rem;
   text-align: center;
-}
-
-.logo {
-  width: 11rem;
-  height: 11rem;
-}
-
-.btn-burger {
-  display: none;
-  position: absolute;
-  right: 10px;
-  top: 7px;
-  padding: 5px;
-  color: #000;
-  font-size: 18px;
-}
-
-@media(max-width: 700px){
-  header .nav-links {
-    flex-direction: column;
-    height: auto;
-  }
-
-  header .nav-links li:nth-child(1){
-    border-top: 1px solid rgba(255, 255, 255, 0.555);
-    margin-top: 50px;
-  }
-
-  header .nav-links li{
-    width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.555);
-    text-align: center;
-    margin-right: 0px;
-    padding: 20px 0;
-  }
-
-  .btn-burger{
-    display: block;
-    top: 2rem;
-    right: 2rem;
-  }
 }
